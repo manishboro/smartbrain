@@ -23,7 +23,7 @@ class Register extends React.Component{
     }
 
     onSubmitRegister = () => {
-        fetch('http://localhost:3000/register', {
+        fetch('http://localhost:3001/register', {
             method: 'post',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
@@ -34,7 +34,7 @@ class Register extends React.Component{
         })
         .then(response => response.json())
         .then(user => {
-            if(user) {
+            if(user.id) {
                 this.props.loadUser(user);
                 this.props.onRouteChange('home');
             } 
@@ -81,7 +81,7 @@ class Register extends React.Component{
                         </fieldset>
                         <div className="">
                             <input
-                        //        onClick={() => onRouteChange('home') /*() => this is added to ensure that the function runs when clicked not when the component renders*/} 
+                        //        onClick={() => onRouteChange('home') /* () => this is added to ensure that the function runs when clicked not when the component renders*/} 
                                 onClick={this.onSubmitRegister}
                                 className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f3 dib" 
                                 type="submit" 
