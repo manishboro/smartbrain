@@ -1,3 +1,13 @@
 .Tilt {
-    background-image: linear-gradient(to right, rgb(249, 23, 232), rgb(45, 224, 244));
+  background-image: linear-gradient(
+    to right,
+    rgb(249, 23, 232),
+    rgb(45, 224, 244)
+  );
+}
+
+@media only screen and (max-width: 600px) {
+  .displayNone {
+    display: none;
+  }
 }

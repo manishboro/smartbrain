@@ -1,9 +1,24 @@
+html {
+  font-size: 65%; /*1 rem = 10px*/
+}
+
 body {
+  height: auto;
   margin: 0;
   font-family: "Courier New", Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to right, rgb(249, 23, 232), rgb(45, 224, 244));
+  background-image: linear-gradient(
+    to right,
+    rgb(249, 23, 232),
+    rgb(45, 224, 244)
+  );
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
 }
 
 button {
